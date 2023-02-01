@@ -1,0 +1,17 @@
+<div class="w-100 d-inline-flex justify-content-center distance">
+  <input (change)="onFileSelected()" type="file" id="file">
+</div>
+<div class="container-viewer">
+  <pdf-viewer 
+    [src]="pdfSrc"
+    [original-size]="false"
+    [show-all]="true"
+    [fit-to-page]="false"
+    [zoom]="1"
+    [zoom-scale]="'page-height'"
+    [render-text]="true"
+    [autoresize]="true"
+    [show-borders]="true"
+    style="width: 100%; height: 100%"
+  ></pdf-viewer>
+</div>
