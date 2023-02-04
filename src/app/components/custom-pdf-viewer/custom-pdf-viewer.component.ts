@@ -1,10 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { of, delay, map } from 'rxjs';
 
 @Component({
+  standalone: true,
   selector: 'app-custom-pdf-viewer',
+  imports: [PdfViewerModule],
   templateUrl: './custom-pdf-viewer.component.html',
-  styleUrls: ['./custom-pdf-viewer.component.scss']
+  styleUrls: ['./custom-pdf-viewer.component.scss'],
+  exportAs: 'app-custom-pdf-viewer'
 })
 export class CustomPdfViewerComponent {
 

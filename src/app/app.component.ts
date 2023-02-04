@@ -1,18 +1,25 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { PDFProgressData } from 'ng2-pdf-viewer';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { Router, RouterModule } from '@angular/router';
+import { PDFProgressData, PdfViewerModule } from 'ng2-pdf-viewer';
 import { delay, map, of } from 'rxjs';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
+  imports: [
+    CommonModule, 
+    RouterModule, 
+    FormsModule
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 
-  constructor(private router: Router) {
-
-  }
+  constructor(private router: Router) {}
 
   title = 'demo-pdf-viewer';
 
